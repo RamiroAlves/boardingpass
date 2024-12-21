@@ -71,5 +71,15 @@ export const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-between",
     width: "100%",
+  },
+  footer: {
+    flexDirection: "row",
+    gap: 22,
+    padding: 20,
+    width: "100%"
+  },
+  footerContent: {
+    flex: 1,
+    gap: 24
   }
 });

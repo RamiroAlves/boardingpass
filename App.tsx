@@ -1,3 +1,4 @@
+import React from "react";
 import {
   useFonts,
   Poppins_400Regular,
@@ -6,6 +7,7 @@ import {
   Poppins_800ExtraBold,
 } from "@expo-google-fonts/poppins";
 import { Home } from "@/app/home";
+import { StatusBar } from "expo-status-bar";
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -18,5 +20,10 @@ export default function App() {
   if (!fontsLoaded) {
     return null;
   }
-  return <Home />;
+  return (
+  <>
+    <StatusBar style="light" backgroundColor="transparent" translucent />
+    <Home />
+  </>
+);
 }

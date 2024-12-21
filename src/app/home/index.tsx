@@ -1,5 +1,7 @@
 import { ImageBackground, Text, View } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
+import QRCode from "react-native-qrcode-svg";
+import Svg, { Line, Circle } from "react-native-svg";
 
 import { Flight } from "@/components/flights";
 import { Info } from "@/components/info";
@@ -41,6 +43,38 @@ export function Home() {
               <Info label="Embarque" value="17:25" />
             </View>
           </View>
+        </View>
+
+        <View>
+          <Svg height={20} width={"100%"}>
+            <Line
+              x1="0%"
+              y1="50%"
+              x2="100%"
+              y2="50%"
+              stroke={colors.gray[400]}
+              strokeWidth={1}
+              strokeDasharray="5,5"
+            />
+            <Circle r={8} cx="0%" cy="50%" fill={colors.black} />
+            <Circle r={8} cx="100%" cy="50%" fill={colors.black} />
+          </Svg>
+        </View>
+
+        <View style={styles.footer}>
+          <View style={styles.footerContent}>
+            <View style={styles.inline}>
+              <Info label="Voo" value="YZ 607" />
+              <Info label="Assento" value="29G" />
+            </View>
+
+            <View style={styles.inline}>
+              <Info label="Terminal" value="3" />
+              <Info label="Portão" value="39" />
+            </View>
+          </View>
+
+          <QRCode value="boarding code" size={130} />
         </View>
       </View>
     </View>
