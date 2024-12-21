@@ -27,5 +27,49 @@ export const styles = StyleSheet.create({
     color: colors.gray[300],
     fontSize: 14,
     fontFamily: fontFamiy.medium
+  },
+  ticket: {
+    backgroundColor: colors.white,
+    borderRadius: 22,
+    overflow: "hidden",
+    paddingBottom: 24,
+    width: "100%"
+  },
+  content: {
+    padding: 20
+  },
+  flight: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+    marginBottom: 52,
+    width: "100%"
+  },
+  duration: {
+    alignItems: "center"
+  },
+  hours: {
+    color: colors.gray[800],
+    fontSize: 14,
+    fontFamily: fontFamiy.regular
+  },
+  label: {
+    color: colors.gray[400],
+    fontSize: 12,
+    fontFamily: fontFamiy.regular,
+    textTransform: "uppercase"
+  },
+  name: {
+    color: colors.black,
+    fontSize: 24,
+    fontFamily: fontFamiy.bold,
+  },
+  details:{
+    marginTop: 52
+  },
+  inline: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    width: "100%",
   }
 });
